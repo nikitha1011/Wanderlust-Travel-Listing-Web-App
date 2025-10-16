@@ -40,22 +40,7 @@ Delete listings
 ✅ Verified MongoDB connection and CRUD operations
 
 🧱 Folder Structure
-Wanderlust/
-│
-├── app.js                      # Main server file
-├── package.json
-├── models/
-│   └── listing.js              # Mongoose schema for listings
-├── views/
-│   ├── listings/
-│   │   ├── index.ejs           # Displays all listings
-│   │   ├── show.ejs            # Displays details of a single listing
-│   │   ├── new.ejs             # Form to create a new listing
-│   │   └── edit.ejs            # Form to edit an existing listing
-│   └── partials/               # (for future header/footer reuse)
-├── public/                     # (for future CSS/JS/static assets)
-│
-└── README.md                   # Documentation
+(https://github.com/user-attachments/assets/d2a72e2c-82b6-4106-b3f5-13c757311ae7)
 
 💡 MongoDB Model (models/listing.js)
 const mongoose = require("mongoose");
