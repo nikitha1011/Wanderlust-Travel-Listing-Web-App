@@ -10,35 +10,30 @@ Wanderlust is designed as a mini full-stack application inspired by travel platf
 It helps in understanding how server-side rendering works with Express and EJS, along with MongoDB (Mongoose) for database management.
 
 ⚙️ Tech Stack
-Category	Technology
-Backend	Node.js, Express.js
-Frontend	EJS, HTML5, CSS3
-Database	MongoDB (Mongoose ODM)
-Utilities	Method-Override, Nodemon, EJS-Mate
-Version Control	Git, GitHub
+| Category            | Technology                         |
+| ------------------- | ---------------------------------- |
+| **Backend**         | Node.js, Express.js                |
+| **Frontend**        | EJS, HTML5, CSS3                   |
+| **Database**        | MongoDB (Mongoose ODM)             |
+| **Utilities**       | Method-Override, Nodemon, EJS-Mate |
+| **Version Control** | Git, GitHub                        |
+
+
 🚀 Features Implemented
 
-✅ Server setup using Express.js
-✅ MongoDB connection with Mongoose
-✅ Dynamic templates using EJS + EJS-Mate layout engine
-✅ Complete CRUD functionality:
-
-Create new listings
-
-Read all listings
-
-View individual listing details
-
-Edit existing listings
-
-Delete listings
-✅ Added Bootstrap-based boilerplate layout (Navbar + Footer)
-✅ Proper image handling: retains old image if new one isn’t entered
-✅ Default Unsplash image if image link is missing
-✅ Fixed “Cannot read properties of null (reading 'image')” bug
-✅ Currency formatting using toLocaleString("en-IN")
-✅ Static assets served from /public
-✅ Clean, modular project structure
+- ✅ Server setup using **Express.js**
+- ✅ MongoDB connection with **Mongoose**
+- ✅ Dynamic templates using **EJS + EJS-Mate** layout engine
+- ✅ Complete CRUD functionality:
+  - Create new listings
+  - Read all listings
+  - View individual listing details
+  - Edit existing listings
+  - Delete listings
+- ✅ Support for **PUT** and **DELETE** methods via `method-override`
+- ✅ Added default Unsplash fallback image
+- ✅ Fixed image retention logic on edit
+- ✅ Configured **nodemon** for live reload
 
 🧱 Folder Structure
 
@@ -71,14 +66,16 @@ module.exports = Listing;
 
 Handles all major routes:
 
-Route	Method	Description
-/listings	GET	Show all listings
-/listings/new	GET	Form to create new listing
-/listings	POST	Add new listing
-/listings/:id	GET	Show details of a listing
-/listings/:id/edit	GET	Edit listing form
-/listings/:id	PUT	Update listing
-/listings/:id	DELETE	Delete listing
+| Route                | Method | Description                |
+| -------------------- | ------ | -------------------------- |
+| `/listings`          | GET    | Show all listings          |
+| `/listings/new`      | GET    | Form to create new listing |
+| `/listings`          | POST   | Add new listing            |
+| `/listings/:id`      | GET    | Show details of a listing  |
+| `/listings/:id/edit` | GET    | Edit listing form          |
+| `/listings/:id`      | PUT    | Update listing             |
+| `/listings/:id`      | DELETE | Delete listing             |
+
 
 Middleware Used:
 
@@ -97,7 +94,6 @@ Displays all listings dynamically in a responsive card layout.
 Shows a single listing’s full details and image.
 
 <img src="<%= listing.image.url || listing.image %>" alt="<%= listing.title %>">
-
 
 Includes buttons for Edit and Delete.
 
