@@ -138,14 +138,16 @@ npx nodemon app.js -e js,ejs,json
 http://localhost:8080
 
 🧠 Development Log
-Date	Change
-Oct 15, 2025	Created base server and MongoDB schema
-Oct 16, 2025	Fixed toLocalString → toLocaleString
-Oct 16, 2025	Added CRUD routes and EJS forms
-Oct 16, 2025	Implemented method-override for PUT/DELETE
-Oct 16, 2025	Configured nodemon for hot reload
-Oct 17, 2025	Added EJS layouts (boilerplate.ejs)
-Oct 17, 2025	Fixed image retention logic on edit
-Oct 17, 2025	Added default Unsplash fallback image
-Oct 17, 2025	Resolved Cannot read property 'image' of null bug
-Oct 17, 2025	Updated folder structure & pushed to GitHub
+| Date             | Change                                              |
+| ---------------- | --------------------------------------------------- |
+| **Oct 15, 2025** | Created base server and MongoDB schema              |
+| **Oct 16, 2025** | Fixed `toLocalString` → `toLocaleString`            |
+| **Oct 16, 2025** | Added CRUD routes and EJS forms                     |
+| **Oct 16, 2025** | Implemented method-override for PUT/DELETE          |
+| **Oct 16, 2025** | Configured nodemon for hot reload                   |
+| **Oct 17, 2025** | Added EJS layouts (`boilerplate.ejs`)               |
+| **Oct 17, 2025** | Fixed image retention logic on edit                 |
+| **Oct 17, 2025** | Added default Unsplash fallback image               |
+| **Oct 17, 2025** | Resolved `Cannot read property 'image' of null` bug |
+| **Oct 17, 2025** | Updated folder structure & pushed to GitHub         |
+
