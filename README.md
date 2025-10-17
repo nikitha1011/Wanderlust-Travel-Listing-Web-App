@@ -62,6 +62,7 @@ const listingSchema = new Schema({
 const Listing = mongoose.model("Listing", listingSchema);
 module.exports = Listing;
 
+
 🔌 Express App — app.js
 
 Handles all major routes:
@@ -83,6 +84,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "public")));
+
 
 🧠 EJS Views Summary
 🪧 index.ejs
