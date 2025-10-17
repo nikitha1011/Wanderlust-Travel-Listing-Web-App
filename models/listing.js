@@ -14,10 +14,10 @@ const listingSchema = new Schema ({
         },
         url: {
             type: String,
-            default: "https://unsplash.com/photos/a-sunset-over-a-body-of-water-with-houses-in-the-background-jVrZgVhqsqs",
+            default: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
         set: (v) => 
             v === "" 
-             ? "https://unsplash.com/photos/a-sunset-over-a-body-of-water-with-houses-in-the-background-jVrZgVhqsqs" 
+             ? "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" 
              : v,
         },   
     },
