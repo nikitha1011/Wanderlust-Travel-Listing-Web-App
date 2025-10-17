@@ -10,13 +10,12 @@ Wanderlust is designed as a mini full-stack application inspired by travel platf
 It helps in understanding how server-side rendering works with Express and EJS, along with MongoDB (Mongoose) for database management.
 
 ⚙️ Tech Stack
-Category	              Technology
-Backend	             Node.js, Express.js
-Frontend	         EJS, HTML5, CSS3
-Database	         MongoDB (Mongoose ODM)
-Utilities	         Method-Override, Nodemon, EJS-Mate
-Version Control      Git, GitHub
-
+Category	Technology
+Backend	Node.js, Express.js
+Frontend	EJS, HTML5, CSS3
+Database	MongoDB (Mongoose ODM)
+Utilities	Method-Override, Nodemon, EJS-Mate
+Version Control	Git, GitHub
 🚀 Features Implemented
 
 ✅ Server setup using Express.js
@@ -103,14 +102,14 @@ module.exports = Listing;
 
 Handles all major routes:
 
-Route	              Method	      Description
-/listings	           GET	       Show all listings
-/listings/new	       GET	       Form to create new listing
-/listings	           POST        Add new listing
-/listings/:id	       GET	       Show details of a listing
-/listings/:id/edit	   GET	       Edit listing form
-/listings/:id	       PUT	       Update listing
-/listings/:id	      DELETE	   Delete listing
+Route	Method	Description
+/listings	GET	Show all listings
+/listings/new	GET	Form to create new listing
+/listings	POST	Add new listing
+/listings/:id	GET	Show details of a listing
+/listings/:id/edit	GET	Edit listing form
+/listings/:id	PUT	Update listing
+/listings/:id	DELETE	Delete listing
 
 Middleware Used:
 
@@ -170,14 +169,14 @@ npx nodemon app.js -e js,ejs,json
 http://localhost:8080
 
 🧠 Development Log
-Date	                          Change
-Oct 15, 2025    	Created base server and MongoDB schema
-Oct 16, 2025    	Fixed toLocalString → toLocaleString
-Oct 16, 2025	    Added CRUD routes and EJS forms
-Oct 16, 2025	    Implemented method-override for PUT/DELETE
-Oct 16, 2025	    Configured nodemon for hot reload
-Oct 17, 2025	    Added EJS layouts (boilerplate.ejs)
-Oct 17, 2025	    Fixed image retention logic on edit
+Date	Change
+Oct 15, 2025	Created base server and MongoDB schema
+Oct 16, 2025	Fixed toLocalString → toLocaleString
+Oct 16, 2025	Added CRUD routes and EJS forms
+Oct 16, 2025	Implemented method-override for PUT/DELETE
+Oct 16, 2025	Configured nodemon for hot reload
+Oct 17, 2025	Added EJS layouts (boilerplate.ejs)
+Oct 17, 2025	Fixed image retention logic on edit
 Oct 17, 2025	Added default Unsplash fallback image
 Oct 17, 2025	Resolved Cannot read property 'image' of null bug
 Oct 17, 2025	Updated folder structure & pushed to GitHub
