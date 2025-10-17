@@ -41,39 +41,8 @@ Delete listings
 ✅ Clean, modular project structure
 
 🧱 Folder Structure
-Wanderlust/
-│
-├── app.js
-├── package.json
-├── package-lock.json
-├── README.md
-│
-├── init/
-│   ├── data.js
-│   └── index.js
-│
-├── models/
-│   └── listing.js
-│
-├── public/
-│   └── css/
-│       └── style.css
-│
-├── views/
-│   ├── includes/
-│   │   ├── footer.ejs
-│   │   └── navbar.ejs
-│   │
-│   ├── layouts/
-│   │   └── boilerplate.ejs
-│   │
-│   └── listings/
-│       ├── edit.ejs
-│       ├── index.ejs
-│       ├── new.ejs
-│       └── show.ejs
-│
-└── node_modules/
+
+(https://github.com/user-attachments/assets/c06e0ee7-93f6-481c-9b45-2e7825926413)
 
 💡 MongoDB Model — models/listing.js
 const mongoose = require("mongoose");
