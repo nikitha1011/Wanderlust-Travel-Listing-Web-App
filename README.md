@@ -12,28 +12,27 @@ This project is part of continuous learning in full-stack web development, refle
 🚀 Features
 
 ✨ Full CRUD Operations — Create, view, update, and delete travel listings
-
 💅 Responsive UI — Built with Bootstrap 5 for a smooth experience across devices
-
 🧩 Dynamic Templating — EJS + EJS-Mate layouts for reusable components
-
 🛡️ Form Validation — Joi (backend) + Bootstrap validation (frontend)
-
 ⚙️ Error Management — Custom ExpressError class and global error handler
-
 🔄 Async Handling — Clean promise handling via wrapAsync utility
-
 🧠 Modular Structure — Organized routes, views, and utilities for scalability
 
+
 🧱 Tech Stack
-Category	Technology
-Frontend	EJS, Bootstrap 5, Font Awesome
-Backend	Node.js, Express.js
-Database	MongoDB (Mongoose)
-Templating Engine	EJS + EJS-Mate
-Validation	Joi
-Utilities	Method-Override, Path, ExpressError, wrapAsync
+| Category              | Technology                                     |
+| --------------------- | ---------------------------------------------- |
+| **Frontend**          | EJS, Bootstrap 5, Font Awesome                 |
+| **Backend**           | Node.js, Express.js                            |
+| **Database**          | MongoDB (Mongoose)                             |
+| **Templating Engine** | EJS + EJS-Mate                                 |
+| **Validation**        | Joi                                            |
+| **Utilities**         | Method-Override, Path, ExpressError, wrapAsync |
+
+
 🗂️ Project Structure
+
 Wanderlust/
 │
 ├── models/
@@ -87,15 +86,19 @@ nodemon app.js
 App runs at: http://localhost:8080
 
 🌐 Application Routes
-Route	Method	Description
-/	GET	Root route
-/listings	GET	Fetch and display all listings
-/listings/new	GET	Form to create a new listing
-/listings	POST	Add a new listing
-/listings/:id	GET	Show details of a specific listing
-/listings/:id/edit	GET	Form to edit an existing listing
-/listings/:id	PUT	Update a listing
-/listings/:id	DELETE	Delete a listing
+
+| Route                | Method | Description                        |
+| -------------------- | ------ | ---------------------------------- |
+| `/`                  | GET    | Root route                         |
+| `/listings`          | GET    | Fetch and display all listings     |
+| `/listings/new`      | GET    | Form to create a new listing       |
+| `/listings`          | POST   | Add a new listing                  |
+| `/listings/:id`      | GET    | Show details of a specific listing |
+| `/listings/:id/edit` | GET    | Form to edit an existing listing   |
+| `/listings/:id`      | PUT    | Update a listing                   |
+| `/listings/:id`      | DELETE | Delete a listing                   |
+
+
 🧠 Validation & Error Handling
 🔸 Server-Side Validation (Joi)
 const listingSchema = Joi.object({
@@ -119,13 +122,17 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error.ejs", { message });
 });
 
+
 📆 Day-to-Day Work & Development Log
-Date	Task	Description
-Oct 15, 2025	Server & DB Setup	Configured Express server and MongoDB connection. Created basic schema and connected successfully.
-Oct 16, 2025	CRUD Routes	Implemented GET, POST, PUT, and DELETE routes with EJS rendering. Added method-override for form-based PUT/DELETE requests.
-Oct 17, 2025	Validation & Templates	Integrated Bootstrap + custom JS validation. Added ejs-mate for layouts and created reusable navbar and footer includes.
-Oct 18, 2025	Error Handling	Introduced ExpressError and wrapAsync utilities. Added centralized error handling middleware and error.ejs page.
-Oct 19, 2025	UI & Polishing	Improved card layouts, styled forms, and fixed image handling during edit. Finalized layout structure and validated all routes in Postman.
+
+| Date             | Task                   | Description                                                                                                                                |
+| ---------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Oct 15, 2025** | Server & DB Setup      | Configured Express server and MongoDB connection. Created basic schema and connected successfully.                                         |
+| **Oct 16, 2025** | CRUD Routes            | Implemented `GET`, `POST`, `PUT`, and `DELETE` routes with EJS rendering. Added method-override for form-based PUT/DELETE requests.        |
+| **Oct 17, 2025** | Validation & Templates | Integrated Bootstrap + custom JS validation. Added `ejs-mate` for layouts and created reusable navbar and footer includes.                 |
+| **Oct 18, 2025** | Error Handling         | Introduced `ExpressError` and `wrapAsync` utilities. Added centralized error handling middleware and `error.ejs` page.                     |
+| **Oct 19, 2025** | UI & Polishing         | Improved card layouts, styled forms, and fixed image handling during edit. Finalized layout structure and validated all routes in Postman. |
+
 
 🧩 Daily Tasks Include:
 
