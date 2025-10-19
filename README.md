@@ -41,6 +41,7 @@ This project is part of continuous learning in full-stack web development, refle
 (https://github.com/user-attachments/assets/5e4426d2-4a9b-4262-96dd-ce242cfdf123)
 
 ⚙️ Installation & Setup
+
 1️⃣ Clone the Repository
 git clone https://github.com/<your-username>/Wanderlust.git
 cd Wanderlust
