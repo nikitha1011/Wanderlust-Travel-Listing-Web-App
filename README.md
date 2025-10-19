@@ -12,11 +12,17 @@ This project is part of continuous learning in full-stack web development, refle
 🚀 Features
 
 ✨ Full CRUD Operations — Create, view, update, and delete travel listings
+
 💅 Responsive UI — Built with Bootstrap 5 for a smooth experience across devices
+
 🧩 Dynamic Templating — EJS + EJS-Mate layouts for reusable components
+
 🛡️ Form Validation — Joi (backend) + Bootstrap validation (frontend)
+
 ⚙️ Error Management — Custom ExpressError class and global error handler
+
 🔄 Async Handling — Clean promise handling via wrapAsync utility
+
 🧠 Modular Structure — Organized routes, views, and utilities for scalability
 
 
@@ -32,38 +38,7 @@ This project is part of continuous learning in full-stack web development, refle
 
 
 🗂️ Project Structure
-
-Wanderlust/
-│
-├── models/
-│   └── listing.js
-│
-├── public/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── script.js
-│
-├── utils/
-│   ├── ExpressError.js
-│   └── wrapAsync.js
-│
-├── views/
-│   ├── includes/
-│   │   ├── navbar.ejs
-│   │   └── footer.ejs
-│   ├── layouts/
-│   │   └── boilerplate.ejs
-│   └── listings/
-│       ├── index.ejs
-│       ├── new.ejs
-│       ├── edit.ejs
-│       ├── show.ejs
-│       └── error.ejs
-│
-├── schema.js
-├── app.js
-└── package.json
+(https://github.com/user-attachments/assets/5e4426d2-4a9b-4262-96dd-ce242cfdf123)
 
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
