@@ -1,162 +1,154 @@
-🌍 Wanderlust — Travel Listing Web App
+🌍 Wanderlust — Travel Listing Web Application
 
-A full-stack Node.js + Express + MongoDB web application for creating and managing travel listings.
-Users can add, view, edit, and delete listings with details like title, description, price, location, and country.
-This project demonstrates CRUD operations, RESTful routing, and EJS templating.
+A full-stack web application that enables users to explore, create, edit, and manage travel destination listings with a clean and responsive interface.
 
-🧩 Project Overview
+🧭 Overview
 
-Wanderlust is a full-stack web application inspired by Airbnb that enables users to create, view, update, and delete travel listings.
-The project demonstrates core concepts of the MERN-like stack (MongoDB, Express, Node.js) with EJS templating, server-side validation, and robust error handling.
+Wanderlust is a dynamic travel listing platform inspired by Airbnb, built using Node.js, Express, MongoDB, and EJS.
+It demonstrates strong skills in backend architecture, RESTful APIs, form validation, and error handling, combined with a modern Bootstrap UI.
 
-Developed as a Major Project, this system focuses on seamless CRUD operations, modular architecture, and a user-friendly interface for managing travel listings.
+This project is part of continuous learning in full-stack web development, reflecting daily progress and practical implementation of core development concepts.
 
-⚙️ Tech Stack
-| Layer                 | Technology                                 |
-| --------------------- | ------------------------------------------ |
-| **Frontend**          | EJS, Bootstrap 5, Font Awesome             |
-| **Backend**           | Node.js, Express.js                        |
-| **Database**          | MongoDB (Mongoose ODM)                     |
-| **Templating Engine** | EJS with ejs-mate                          |
-| **Validation**        | Joi                                        |
-| **Utilities**         | Method-Override, Express Static Middleware |
-| **Error Handling**    | ExpressError, wrapAsync                    |
+🚀 Features
 
+✨ Full CRUD Operations — Create, view, update, and delete travel listings
 
-🚀 Features Implemented
+💅 Responsive UI — Built with Bootstrap 5 for a smooth experience across devices
 
-Complete CRUD Functionality:
-Users can add, browse, edit, and delete listings.
+🧩 Dynamic Templating — EJS + EJS-Mate layouts for reusable components
 
-Dynamic Frontend using EJS:
-Reusable layouts and partials (navbar, footer, boilerplate) ensure maintainability.
+🛡️ Form Validation — Joi (backend) + Bootstrap validation (frontend)
 
-Robust Validation:
+⚙️ Error Management — Custom ExpressError class and global error handler
 
-Client-side validation using Bootstrap and custom JavaScript.
+🔄 Async Handling — Clean promise handling via wrapAsync utility
 
-Server-side validation using Joi schema to prevent invalid data entry.
+🧠 Modular Structure — Organized routes, views, and utilities for scalability
 
-Centralized Error Handling:
-Implemented via a custom ExpressError class and a global middleware for consistent error responses.
+🧱 Tech Stack
+Category	Technology
+Frontend	EJS, Bootstrap 5, Font Awesome
+Backend	Node.js, Express.js
+Database	MongoDB (Mongoose)
+Templating Engine	EJS + EJS-Mate
+Validation	Joi
+Utilities	Method-Override, Path, ExpressError, wrapAsync
+🗂️ Project Structure
+Wanderlust/
+│
+├── models/
+│   └── listing.js
+│
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── script.js
+│
+├── utils/
+│   ├── ExpressError.js
+│   └── wrapAsync.js
+│
+├── views/
+│   ├── includes/
+│   │   ├── navbar.ejs
+│   │   └── footer.ejs
+│   ├── layouts/
+│   │   └── boilerplate.ejs
+│   └── listings/
+│       ├── index.ejs
+│       ├── new.ejs
+│       ├── edit.ejs
+│       ├── show.ejs
+│       └── error.ejs
+│
+├── schema.js
+├── app.js
+└── package.json
 
-Async Error Wrapper:
-All asynchronous route handlers are encapsulated using wrapAsync() for cleaner code and better stability.
-
-Responsive UI:
-Designed with Bootstrap 5 and Font Awesome for a simple and professional look.
-
-🧱 Folder Structure
-
-(https://github.com/user-attachments/assets/c06e0ee7-93f6-481c-9b45-2e7825926413)
-
-💡 MongoDB Model — models/listing.js
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-
-const listingSchema = new Schema({
-  title: { type: String, required: true },
-  description: String,
-  image: {
-    filename: { type: String, default: "listingimage" },
-    url: {
-      type: String,
-      default:
-        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    },
-  },
-  price: Number,
-  location: String,
-  country: String,
-});
-
-const Listing = mongoose.model("Listing", listingSchema);
-module.exports = Listing;
-
-
-🔌 Express App — app.js
-
-Handles all major routes:
-
-| Route                | Method | Description                |
-| -------------------- | ------ | -------------------------- |
-| `/listings`          | GET    | Show all listings          |
-| `/listings/new`      | GET    | Form to create new listing |
-| `/listings`          | POST   | Add new listing            |
-| `/listings/:id`      | GET    | Show details of a listing  |
-| `/listings/:id/edit` | GET    | Edit listing form          |
-| `/listings/:id`      | PUT    | Update listing             |
-| `/listings/:id`      | DELETE | Delete listing             |
-
-
-Middleware Used:
-
-app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method"));
-app.engine("ejs", ejsMate);
-app.use(express.static(path.join(__dirname, "public")));
-
-
-🧠 EJS Views Summary
-🪧 index.ejs
-
-Displays all listings dynamically in a responsive card layout.
-
-📝 show.ejs
-
-Shows a single listing’s full details and image.
-
-<img src="<%= listing.image.url || listing.image %>" alt="<%= listing.title %>">
-
-Includes buttons for Edit and Delete.
-
-➕ new.ejs
-
-Form to create a new listing.
-
-✏️ edit.ejs
-
-Form to update an existing listing. Retains old image if left empty.
-
-🧩 Layouts
-
-boilerplate.ejs — Main layout template (wraps all pages)
-
-navbar.ejs / footer.ejs — Reusable partials for navigation and footer
-
-⚙️ Setup Instructions
-1️⃣ Clone the repository
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
 git clone https://github.com/<your-username>/Wanderlust.git
 cd Wanderlust
 
-2️⃣ Install dependencies
+2️⃣ Install Dependencies
 npm install
 
-3️⃣ Start MongoDB
-mongod
+3️⃣ Configure MongoDB
 
-
-Or modify app.js connection string:
+Ensure MongoDB is running locally or update your connection string in app.js:
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
-4️⃣ Run the app
-npx nodemon app.js -e js,ejs,json
+4️⃣ Run the Application
+nodemon app.js
 
-5️⃣ Open in browser
-http://localhost:8080
 
-🧠 Development Log
-| Date             | Change                                              |
-| ---------------- | --------------------------------------------------- |
-| **Oct 15, 2025** | Created base server and MongoDB schema              |
-| **Oct 16, 2025** | Fixed `toLocalString` → `toLocaleString`            |
-| **Oct 16, 2025** | Added CRUD routes and EJS forms                     |
-| **Oct 16, 2025** | Implemented method-override for PUT/DELETE          |
-| **Oct 16, 2025** | Configured nodemon for hot reload                   |
-| **Oct 17, 2025** | Added EJS layouts (`boilerplate.ejs`)               |
-| **Oct 17, 2025** | Fixed image retention logic on edit                 |
-| **Oct 17, 2025** | Added default Unsplash fallback image               |
-| **Oct 17, 2025** | Resolved `Cannot read property 'image' of null` bug |
-| **Oct 17, 2025** | Updated folder structure & pushed to GitHub         |
+App runs at: http://localhost:8080
 
+🌐 Application Routes
+Route	Method	Description
+/	GET	Root route
+/listings	GET	Fetch and display all listings
+/listings/new	GET	Form to create a new listing
+/listings	POST	Add a new listing
+/listings/:id	GET	Show details of a specific listing
+/listings/:id/edit	GET	Form to edit an existing listing
+/listings/:id	PUT	Update a listing
+/listings/:id	DELETE	Delete a listing
+🧠 Validation & Error Handling
+🔸 Server-Side Validation (Joi)
+const listingSchema = Joi.object({
+  listing: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
+    price: Joi.number().min(0).required(),
+    location: Joi.string().required(),
+    country: Joi.string().required(),
+    image: Joi.string().allow("")
+  }).required()
+});
+
+🔸 Client-Side Validation
+
+Bootstrap’s validation system + script.js prevent invalid form submissions.
+
+🔸 Centralized Error Middleware
+app.use((err, req, res, next) => {
+  const { statusCode = 500, message = "Something went wrong!" } = err;
+  res.status(statusCode).render("error.ejs", { message });
+});
+
+📆 Day-to-Day Work & Development Log
+Date	Task	Description
+Oct 15, 2025	Server & DB Setup	Configured Express server and MongoDB connection. Created basic schema and connected successfully.
+Oct 16, 2025	CRUD Routes	Implemented GET, POST, PUT, and DELETE routes with EJS rendering. Added method-override for form-based PUT/DELETE requests.
+Oct 17, 2025	Validation & Templates	Integrated Bootstrap + custom JS validation. Added ejs-mate for layouts and created reusable navbar and footer includes.
+Oct 18, 2025	Error Handling	Introduced ExpressError and wrapAsync utilities. Added centralized error handling middleware and error.ejs page.
+Oct 19, 2025	UI & Polishing	Improved card layouts, styled forms, and fixed image handling during edit. Finalized layout structure and validated all routes in Postman.
+
+🧩 Daily Tasks Include:
+
+Designing and maintaining EJS templates
+
+Testing APIs via Postman & Hoppscotch
+
+Managing version control using Git & GitHub
+
+Debugging validation and rendering issues
+
+Writing clean, reusable Express middleware
+
+Keeping consistent commits and documentation
+
+🎨 User Interface Highlights
+
+Responsive Bootstrap 5 layout
+
+Cards for travel listings with images and pricing
+
+Clean typography using Google Fonts (Plus Jakarta Sans)
+
+Form validation feedback (valid/invalid states)
+
+Centralized layout with header, footer, and navigation
