@@ -6,34 +6,45 @@ This project demonstrates CRUD operations, RESTful routing, and EJS templating.
 
 🧩 Project Overview
 
-Wanderlust is designed as a mini full-stack application inspired by travel platforms like Airbnb.
-It helps in understanding how server-side rendering works with Express and EJS, along with MongoDB (Mongoose) for database management.
+Wanderlust is a full-stack web application inspired by Airbnb that enables users to create, view, update, and delete travel listings.
+The project demonstrates core concepts of the MERN-like stack (MongoDB, Express, Node.js) with EJS templating, server-side validation, and robust error handling.
+
+Developed as a Major Project, this system focuses on seamless CRUD operations, modular architecture, and a user-friendly interface for managing travel listings.
 
 ⚙️ Tech Stack
-| Category            | Technology                         |
-| ------------------- | ---------------------------------- |
-| **Backend**         | Node.js, Express.js                |
-| **Frontend**        | EJS, HTML5, CSS3                   |
-| **Database**        | MongoDB (Mongoose ODM)             |
-| **Utilities**       | Method-Override, Nodemon, EJS-Mate |
-| **Version Control** | Git, GitHub                        |
+| Layer                 | Technology                                 |
+| --------------------- | ------------------------------------------ |
+| **Frontend**          | EJS, Bootstrap 5, Font Awesome             |
+| **Backend**           | Node.js, Express.js                        |
+| **Database**          | MongoDB (Mongoose ODM)                     |
+| **Templating Engine** | EJS with ejs-mate                          |
+| **Validation**        | Joi                                        |
+| **Utilities**         | Method-Override, Express Static Middleware |
+| **Error Handling**    | ExpressError, wrapAsync                    |
 
 
 🚀 Features Implemented
 
-- ✅ Server setup using **Express.js**
-- ✅ MongoDB connection with **Mongoose**
-- ✅ Dynamic templates using **EJS + EJS-Mate** layout engine
-- ✅ Complete CRUD functionality:
-  - Create new listings
-  - Read all listings
-  - View individual listing details
-  - Edit existing listings
-  - Delete listings
-- ✅ Support for **PUT** and **DELETE** methods via `method-override`
-- ✅ Added default Unsplash fallback image
-- ✅ Fixed image retention logic on edit
-- ✅ Configured **nodemon** for live reload
+Complete CRUD Functionality:
+Users can add, browse, edit, and delete listings.
+
+Dynamic Frontend using EJS:
+Reusable layouts and partials (navbar, footer, boilerplate) ensure maintainability.
+
+Robust Validation:
+
+Client-side validation using Bootstrap and custom JavaScript.
+
+Server-side validation using Joi schema to prevent invalid data entry.
+
+Centralized Error Handling:
+Implemented via a custom ExpressError class and a global middleware for consistent error responses.
+
+Async Error Wrapper:
+All asynchronous route handlers are encapsulated using wrapAsync() for cleaner code and better stability.
+
+Responsive UI:
+Designed with Bootstrap 5 and Font Awesome for a simple and professional look.
 
 🧱 Folder Structure
 
