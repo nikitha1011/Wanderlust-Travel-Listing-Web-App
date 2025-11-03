@@ -72,6 +72,7 @@ ATLASDB_URL=<mongodb_connection_string>
 NODE_ENV=development
 
 
+
 4️⃣ Run the Application
 
 nodemon app.js
@@ -104,8 +105,8 @@ Form Validation Feedback: Both client-side (Bootstrap) and server-side (Joi)
 🌐 Deployment
 
 Live Application: Wanderlust on Render
+https://wanderlust-travel-listing-web-app.onrender.com
 
-GitHub Repository: Wanderlust Web App
 
 🏆 Summary
 
