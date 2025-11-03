@@ -1,137 +1,124 @@
 🌍 Wanderlust — Travel Listing Web Application
 
-A full-stack web application that enables users to explore, create, edit, and manage travel destination listings with a clean and responsive interface.
+Wanderlust is a full-stack travel listing platform inspired by Airbnb, designed to help users explore, create, and manage travel destinations with ease. This project demonstrates advanced full-stack development skills with a focus on MVC architecture and interactive maps integration.
 
-🧭 Overview
+🧭 Project Overview
 
-Wanderlust is a dynamic travel listing platform inspired by Airbnb, built using Node.js, Express, MongoDB, and EJS.
-It demonstrates strong skills in backend architecture, RESTful APIs, form validation, and error handling, combined with a modern Bootstrap UI.
+Wanderlust is a dynamic web application built with Node.js, Express, MongoDB, and EJS, emphasizing:
 
-This project is part of continuous learning in full-stack web development, reflecting daily progress and practical implementation of core development concepts.
+MVC Architecture: Clean separation of Models, Views, and Controllers for scalability and maintainability
 
-🚀 Features
+Map Integration: Interactive Mapbox maps for every listing, enhancing user experience
 
-✨ Full CRUD Operations — Create, view, update, and delete travel listings
+CRUD Functionality: Users can create, read, update, and delete listings
 
-💅 Responsive UI — Built with Bootstrap 5 for a smooth experience across devices
+Cloud Image Management: Upload and display images with Cloudinary
 
-🧩 Dynamic Templating — EJS + EJS-Mate layouts for reusable components
+Responsive UI: Designed with Bootstrap 5 for mobile-first responsiveness
 
-🛡️ Form Validation — Joi (backend) + Bootstrap validation (frontend)
+Validation & Error Handling: Backend validation via Joi and centralized error management
 
-⚙️ Error Management — Custom ExpressError class and global error handler
+This project reflects real-world application development, combining robust backend logic with a modern, user-friendly interface.
 
-🔄 Async Handling — Clean promise handling via wrapAsync utility
+🚀 Key Features
 
-🧠 Modular Structure — Organized routes, views, and utilities for scalability
+🏗️ MVC Architecture: Organized structure separating routes, models, and views for clean code and scalability
 
+🗺️ Interactive Maps (Mapbox): Users can see locations visually and interact with destination maps
 
-🧱 Tech Stack
-| Category              | Technology                                     |
-| --------------------- | ---------------------------------------------- |
-| **Frontend**          | EJS, Bootstrap 5, Font Awesome                 |
-| **Backend**           | Node.js, Express.js                            |
-| **Database**          | MongoDB (Mongoose)                             |
-| **Templating Engine** | EJS + EJS-Mate                                 |
-| **Validation**        | Joi                                            |
-| **Utilities**         | Method-Override, Path, ExpressError, wrapAsync |
+✨ Full CRUD Operations: Add, view, edit, and delete travel listings
 
+🖼️ Cloudinary Image Uploads: Efficient image handling and storage
 
-🗂️ Project Structure
-(https://github.com/user-attachments/assets/5e4426d2-4a9b-4262-96dd-ce242cfdf123)
+💅 Responsive Design: Smooth experience across desktop, tablet, and mobile
+
+🛡️ Validation & Error Handling: Backend validation with Joi, centralized error middleware
+
+🧩 Reusable Components: EJS + ejs-mate for templating and modular views
+
+🧩 Reusable Components: EJS + ejs-mate for templating and modular views
+| Category          | Technology                               |
+| ----------------- | ---------------------------------------- |
+| **Frontend**      | EJS, Bootstrap 5                         |
+| **Backend**       | Node.js, Express.js                      |
+| **Database**      | MongoDB (Mongoose)                       |
+| **Validation**    | Joi                                      |
+| **Utilities**     | Method-Override, ExpressError, wrapAsync |
+| **Maps**          | Mapbox                                   |
+| **Image Storage** | Cloudinary                               |
+| **Deployment**    | Render                                   |
+
 
 ⚙️ Installation & Setup
 
 1️⃣ Clone the Repository
-git clone https://github.com/<your-username>/Wanderlust.git
-cd Wanderlust
+
+git clone https://github.com/nikitha1011/Wanderlust-Travel-Listing-Web-App.git
+cd Wanderlust-Travel-Listing-Web-App
+
 
 2️⃣ Install Dependencies
+
 npm install
 
-3️⃣ Configure MongoDB
 
-Ensure MongoDB is running locally or update your connection string in app.js:
+3️⃣ Configure Environment Variables (.env)
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+CLOUD_NAME=<cloudinary_name>
+CLOUD_API_KEY=<cloudinary_api_key>
+CLOUD_API_SECRET=<cloudinary_api_secret>
+MAP_TOKEN=<mapbox_token>
+ATLASDB_URL=<mongodb_connection_string>
+NODE_ENV=development
+
 
 4️⃣ Run the Application
+
 nodemon app.js
 
 
-App runs at: http://localhost:8080
-
-🌐 Application Routes
-
-| Route                | Method | Description                        |
-| -------------------- | ------ | ---------------------------------- |
-| `/`                  | GET    | Root route                         |
-| `/listings`          | GET    | Fetch and display all listings     |
-| `/listings/new`      | GET    | Form to create a new listing       |
-| `/listings`          | POST   | Add a new listing                  |
-| `/listings/:id`      | GET    | Show details of a specific listing |
-| `/listings/:id/edit` | GET    | Form to edit an existing listing   |
-| `/listings/:id`      | PUT    | Update a listing                   |
-| `/listings/:id`      | DELETE | Delete a listing                   |
+| Route                | Method | Description                  |
+| -------------------- | ------ | ---------------------------- |
+| `/`                  | GET    | Home route                   |
+| `/listings`          | GET    | View all listings            |
+| `/listings/new`      | GET    | Form to create a new listing |
+| `/listings`          | POST   | Add a new listing            |
+| `/listings/:id`      | GET    | View details of a listing    |
+| `/listings/:id/edit` | GET    | Form to edit a listing       |
+| `/listings/:id`      | PUT    | Update a listing             |
+| `/listings/:id`      | DELETE | Delete a listing             |
 
 
-🧠 Validation & Error Handling
-🔸 Server-Side Validation (Joi)
-const listingSchema = Joi.object({
-  listing: Joi.object({
-    title: Joi.string().required(),
-    description: Joi.string().required(),
-    price: Joi.number().min(0).required(),
-    location: Joi.string().required(),
-    country: Joi.string().required(),
-    image: Joi.string().allow("")
-  }).required()
-});
+🎨 UI & Maps Integration
 
-🔸 Client-Side Validation
+Responsive Bootstrap 5 Layout
 
-Bootstrap’s validation system + script.js prevent invalid form submissions.
+Listing Cards: Image previews, pricing, and location
 
-🔸 Centralized Error Middleware
-app.use((err, req, res, next) => {
-  const { statusCode = 500, message = "Something went wrong!" } = err;
-  res.status(statusCode).render("error.ejs", { message });
-});
+Mapbox Integration: Each listing includes an interactive map displaying the exact location
 
+Reusable EJS Templates: Modular views with header, footer, and navigation
 
-📆 Day-to-Day Work & Development Log
+Form Validation Feedback: Both client-side (Bootstrap) and server-side (Joi)
 
-| Date             | Task                   | Description                                                                                                                                |
-| ---------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Oct 15, 2025** | Server & DB Setup      | Configured Express server and MongoDB connection. Created basic schema and connected successfully.                                         |
-| **Oct 16, 2025** | CRUD Routes            | Implemented `GET`, `POST`, `PUT`, and `DELETE` routes with EJS rendering. Added method-override for form-based PUT/DELETE requests.        |
-| **Oct 17, 2025** | Validation & Templates | Integrated Bootstrap + custom JS validation. Added `ejs-mate` for layouts and created reusable navbar and footer includes.                 |
-| **Oct 18, 2025** | Error Handling         | Introduced `ExpressError` and `wrapAsync` utilities. Added centralized error handling middleware and `error.ejs` page.                     |
-| **Oct 19, 2025** | UI & Polishing         | Improved card layouts, styled forms, and fixed image handling during edit. Finalized layout structure and validated all routes in Postman. |
+🌐 Deployment
 
+Live Application: Wanderlust on Render
 
-🧩 Daily Tasks Include:
+GitHub Repository: Wanderlust Web App
 
-Designing and maintaining EJS templates
+🏆 Summary
 
-Testing APIs via Postman & Hoppscotch
+Wanderlust is a full-stack, production-ready application highlighting:
 
-Managing version control using Git & GitHub
+MVC architecture for clean, maintainable code
 
-Debugging validation and rendering issues
+Mapbox maps for interactive location visualization
 
-Writing clean, reusable Express middleware
+Full CRUD functionality with cloud image management
 
-Keeping consistent commits and documentation
+Robust validation and error handling
 
-🎨 User Interface Highlights
+Responsive, modern UI design
 
-Responsive Bootstrap 5 layout
-
-Cards for travel listings with images and pricing
-
-Clean typography using Google Fonts (Plus Jakarta Sans)
-
-Form validation feedback (valid/invalid states)
-
-Centralized layout with header, footer, and navigation
+It demonstrates the ability to integrate advanced features like interactive maps into a real-world web application, reflecting strong backend and frontend skills.
